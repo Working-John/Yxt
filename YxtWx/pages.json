@@ -1,0 +1,211 @@
+{
+	"lazyCodeLoading":"requiredComponents",
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "数计学院研学通"
+			}
+		},
+		{
+			"path": "pages/rate/rate",
+			"style": {
+				"navigationBarTitleText": "学生评价"
+			}
+		},
+		{
+				"path": "pages/my/my",
+				"style": {
+					"navigationBarTitleText": "我的信息"
+				}
+			},
+		{
+			"path": "pages/wode/wode",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/activity/activity",
+			"style": {
+				"navigationBarTitleText": "活动通知"
+			}
+		},
+		{
+			"path": "pages/contacts/contacts",
+			"style": {
+				"navigationBarTitleText": "联系",
+				"enablePullDownRefresh": false
+			}
+		
+		},{
+			"path": "pages/lesson/Timetable",
+			"style": {
+				"navigationBarTitleText": "本科生大三课表",
+				"enablePullDownRefresh": false
+			}
+		
+		},{
+			"path": "pages/teacher/teacher",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		
+		},{
+			"path": "pages/teachers/teachers",
+			"style": {
+				"navigationBarTitleText": "数计学院研学通",
+				// "navigationStyle": "default",
+				"enablePullDownRefresh": false
+			}
+		
+		},
+		{
+			"path": "pages/teacher/estimate",
+			"style": {
+				"navigationBarTitleText": "教师端",
+				"enablePullDownRefresh": false
+			}
+		
+		},{
+			"path": "pages/teacher/estimate2",
+			"style": {
+				"navigationBarTitleText": "学生打卡",
+				"enablePullDownRefresh": false
+			}
+		
+		}
+       ,{
+		    "path" : "pages/photo/photo",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "每日打卡"
+		    }
+		    
+		},{
+		    "path" : "pages/grid/grid",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "教师端"
+		    }
+		    
+		},
+		{
+            "path" : "pages/index/notice/notice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "公告栏",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/wode/score/score",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/experience/experience",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "投稿经验",
+				"enablePullDownRefresh": true
+            }
+            
+        },{
+            "path" : "pages/experience/more1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "投稿经验",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/experience/publication",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发布经验",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+	    "path" : "pages/authority/authority",
+	    "style" :                                                                                    
+	    {
+	        "navigationBarTitleText": "登录",
+	        "enablePullDownRefresh": false
+	    }
+	    
+        },
+		{
+		"path" : "pages/lunbo/lunbo",
+		"style" :                                                                                    
+		{
+		    "navigationBarTitleText": "",
+		    "enablePullDownRefresh": false
+		}
+		
+		}
+        ,{
+            "path" : "pages/xuanze/xuanze",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "每日工作",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/post/post",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/works/works",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "学生工作",
+                "enablePullDownRefresh": false
+            }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#1296db",
+		"scrollIndictor":"none",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#1296db",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/static/home.png",
+				"selectedIconPath": "/static/home-active.png"
+			},
+			{
+				"pagePath": "pages/wode/wode",
+				"text": "我的",
+				"iconPath": "/static/wode.png",
+				"selectedIconPath": "/static/wode-active.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}
