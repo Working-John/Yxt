@@ -1,0 +1,54 @@
+#端口号
+server:
+  port: 8090
+  ssl:
+    key-store: zafuyanxuetong.cn.jks
+    #您需要使用实际的证书名称替换domain_name.pfx。
+    key-store-password: 6me14cwo     #填写pfx-password.txt文件内的密码。
+    key-store-type: JKS
+
+
+#数据库连接
+spring:
+  servlet:
+    # 表单上传文件大小限制
+    multipart:
+      enabled: true # 开启文件上传
+      max-file-size: 20MB # 设置上传文件最大值
+      max-request-size: 20MB # 设置上传文件总值
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://47.97.153.205:3306/yanxuetong?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=CTT&allowPublicKeyRetrieval=true
+      username: root
+      password: Yxt@123-
+  mvc:
+    pathmatch:
+      # 配置策略
+      matching-strategy: ant-path-matcher
+
+#文件上传配置
+uploadPath:
+  # 图片保存物理真实目录路径，Windows默认C盘根目录，Linux默认根目录（../）
+  realFolder: https://www.zafuyanxuetong.cn:8090/data/img/
+  # 图片反射的虚拟路径：列如http://localhost/upload/logo/xxx.jpg
+  # reflexFolder: /D:/img/
+  reflexFolder: https://www.zafuyanxuetong.cn:8090/data/img/
+
+#开启mybatis-plus日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#  id自增
+  global-config:
+    db-config:
+      id-type: auto
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Yxt@123-
+    url: jdbc:mysql://47.97.153.205:3306/yanxuetong?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  servlet:
+    multipart:
+      max-file-size: 5120MB
+      max-request-size: 5120MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 全局默认主键类型
+      id-type: UUID
+      # 表名、是否使用下划线命名，默认数据库表使用下划线命名
+      table-underline: true
+      # 逻辑已删除值(默认为 1)
+      logic-delete-value: true
+      # 逻辑未删除值(默认为 0)
+      logic-not-delete-value: false
+  mapper-locations: classpath:mapper/*.xml
+
+# 日志配置
+logging:
+  config: classpath:logback.xml
+
+# 分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countsql
+
+# Swagger配置
+swagger:
+  title: VIP-FILE-MANAGER Swagger API
+  description: 本地文件管理服务
+  version: 1.0.0
+
+file:
+  # 文件存储路径
+  save-path: D:\filetest\file-manager
+  # 断点续传文件配置路径
+  conf-path: D:\filetest\file-manager\conf
+
+#    username: root
+#    password: Yxt@123-
+#    url: jdbc:mysql://47.97.153.205:3306/yanxuetong?
